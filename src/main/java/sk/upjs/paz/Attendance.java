@@ -1,4 +1,15 @@
 package sk.upjs.paz;
 
-public class Attendance {
+import lombok.With;
+
+import java.time.LocalDateTime;
+import java.util.Set;
+
+@With
+public record Attendance(
+		Long id,
+		LocalDateTime dateTime,
+		Subject subject,
+		Set<Student> students
+) {
 }
